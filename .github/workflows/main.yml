@@ -1,0 +1,16 @@
+name: CI
+
+on:
+  schedule:
+    - cron:  '0 * * * *'
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a multi-line script
+      run: |
+        ./installinstallmacos.py --seed DeveloperSeed
